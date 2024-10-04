@@ -1,4 +1,4 @@
 export class CreateTodoDto {
-  todo: string;
+  title: string;
   is_done: boolean;
 }
