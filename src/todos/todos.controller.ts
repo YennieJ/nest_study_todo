@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, ParseIntPipe } from '@nestjs/common';
 import { TodosService } from './todos.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
@@ -8,6 +8,7 @@ export class TodosController {
   constructor(private readonly todosService: TodosService) {}
 
   @Post()
+  // create(@Body(new ValidationPipe()) createTodoDto: CreateTodoDto) { 함수 하나당 validationPipe
   create(@Body() createTodoDto: CreateTodoDto) {
     return this.todosService.create(createTodoDto);
   }
@@ -18,7 +19,7 @@ export class TodosController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id', ParseIntPipe) id: string) {
     return this.todosService.findOne(+id);
   }
 
