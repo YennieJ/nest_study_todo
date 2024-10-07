@@ -1,87 +1,50 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Project setup
-
-```bash
-$ npm install
-```
-
-## Compile and run the project
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 # nest_study_todo
-# nest_study_todo
+
+> 프론트엔드 개발자로서 백엔드와 원활한 소통을 위해 NestJs에 대한 이해를 높이기 위한 간단한 클론 코딩입니다.
+>
+> > 채택된 프레임워크와 라이브러리등은 code 비교를 통해 학습 효과를 극대화 하기 위해 현재 진행하고 있는 프로젝트를 기반으로 구성
+
+## NestJs
+
+- Node.js를 기반으로 한 서버 어플리케이션을 개발하기 위한 프레임워크로 타입스크립트를 지원하고 미들웨어, 파이프, 가드, 인터셉터와 같은 기능으로 요청과 응답을 처리하는 유연성과 RESTful API를 쉽게 구축할 수 있다.
+
+1. controller.ts 파일 : 클라이언트 요청을 처리하고, 응답을 반환하는 역할
+
+- 클라이언트의 HTTP 요청을 처리하는 역할을 한다. 각 컨트롤러는 @Controller() 데코레이터를 통해 정의하고 특정 URL 경로에 대한 요청을 처리하는 메서드를 포함한다. 메서드는 @Get(), @Post(), @Put(), @Delete() 등의 데코레이터를 사용하여 HTTP 메서드에 따라 라우팅을 설정하여 각 요청에 대한 응답을 받을 수 있게 한다.
+
+- 클라이언트로부터 전달된 요청 데이터(예: body, 쿼리 파라미터, URL 파라미터 등)를 처리하기 위해 @Body(), @Query(), @Param() 등의 데코레이터를 사용하여 요청 데이터를 쉽게 추출한다.
+
+- ValidationPipe유효성 검사(@...Pipe() 데코레이이터)를 통해 클라이언트가 전송한 데이터가 예상한 형식과 규칙을 준수하는지 확인할 수 있다. 또한 성공적인 결과, 오류 메세지 등을 포함하여 클라인트가 이해할 수 있는 형태로 응답을 구성한다.
+
+2. module.ts 파일 : NestJS 애플리케이션의 구조를 정의하고, 구성 요소 간의 관계를 설정하는 역할
+
+```
+@Module({
+  imports: [], // 다른 모듈을 가져올 수 있음
+  controllers: [ExamController], // 이 모듈에서 사용할 컨트롤러
+  providers: [ExamService], // 이 모듈에서 사용할 서비스
+})
+export class ExamModule {}
+```
+
+3. service.ts 파일 : 비즈니스 로직을 구현하는 역할
+
+- 데이터 처리, 계산, 조건부 로직 등을 구현하여 컨트롤러에서 요청을 처리할 때 필요한 기능(데이터 검증, 변환 등)을 제공한다.
+- 데이터베이스와의 CRUD 작업을 수행하고 ORM 라이브러리를 사용하여 데이터베이스와의 상호작용을 간편하게 처리한다.
+- 여러 컨트롤러에서 재사용이 가능하다.
+
+4. dto.ts 파일 : 데이터 전송을 위한 객체를 정의하는 역할
+
+- class-validator와 같은 라이브러리를 사용하여 DTO에 유효성 검사 규칙을 정의하여 예상한 형식과 규칙을 준수하는지 확인하다.
+- API의 입력 및 출력 형식을 문서화하는 데 유용하다. OpenAPI(Swagger)와 같은 도구를 사용하여 DTO를 기반으로 API 문서를 자동으로 생성할 수 있다.
+
+5. decorator.ts 파일 : 데코레이터를 정의하는 파일
+
+- 기존의 기능을 확장하거나 새로운 기능을 추가할 수 있다. 특적 조건에 따라 요청을 필터링하거나, 인증 및 권한 부여 로직을 추가하는 데코레이터를 만들 수 있다.
+  > 데코레이터는 프로그래밍에서 특정 클래스, 메서드, 속성 또는 매개변수에 추가적인 메타데이터를 부여하거나 기능을 확장하는 데 사용되는 ❗함수❗
+
+## ORM (Object-Relational Mapping)
+
+- 객체 지향 프로그래밍 언어와 관계형 데이터베이스 간의 데이터 변환을 자동으로 처리하는 기술이다. SQL 쿼리를 직접 작성하는 대신, 객체 지향적인 방식으로 데이터베이스 작업을 수행할 수 있다. 단, 일반적으로 CRUD 작업에 최적화 되어있어 복잡한 SQL 쿼리를 작성해야 하는 경우 직접 쿼리를 작성하는 것이 더 효율적이다.
+
+### 👍다음 목표 : 관계형 데이터베이스
