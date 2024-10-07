@@ -16,7 +16,7 @@ datasource db {
 model Todo {
   id    Int     @id @default(autoincrement())
   title String  
-  is_done  Boolean @default(false)
+  isDone  Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

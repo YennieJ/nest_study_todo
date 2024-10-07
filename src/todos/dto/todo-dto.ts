@@ -1,7 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { Todo } from '@prisma/client';
 import { IsString, IsBoolean, MinLength, MaxLength } from 'class-validator';
 
-export class CreateTodoDto {
+export class TodoDto implements Todo {
   @ApiProperty({
     required: true,
     type: String,
@@ -33,4 +34,23 @@ export class CreateTodoDto {
     message: 'Boolean 타입만 가능합니다',
   })
   isDone: boolean;
+
+  @ApiProperty({
+    type: Number,
+    description: '알일 아이디',
+    example: '10',
+  })
+  id: number;
+
+  @ApiProperty({
+    description: '생성일',
+    example: '2024-10-07T01:28:25.014Z',
+  })
+  createdAt: Date;
+
+  @ApiProperty({
+    description: '수정일',
+    example: '2024-10-07T01:28:25.014Z',
+  })
+  updatedAt: Date;
 }

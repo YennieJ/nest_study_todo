@@ -10,7 +10,7 @@ export class TodosService {
   // model Todo {
   //   id    Int     @id @default(autoincrement())
   //   title String
-  //   is_done  Boolean @default(false)
+  //   isDone  Boolean @default(false)
   //   createdAt DateTime @default(now())
   //   updatedAt DateTime @updatedAt
   // }
@@ -19,7 +19,7 @@ export class TodosService {
     return this.prismaService.todo.create({
       data: {
         title: createTodoDto.title,
-        is_done: createTodoDto.is_done,
+        isDone: createTodoDto.isDone,
       },
     });
   }
@@ -43,7 +43,7 @@ export class TodosService {
       },
       data: {
         title: updateTodoDto.title,
-        is_done: updateTodoDto.is_done,
+        isDone: updateTodoDto.isDone,
       },
     });
   }
@@ -57,7 +57,7 @@ export class TodosService {
   }
 
   // create(createTodoDto: CreateTodoDto) {
-  //   return `This action adds a new todo - todo: ${createTodoDto.todo} is_done: ${createTodoDto.is_done}`;
+  //   return `This action adds a new todo - todo: ${createTodoDto.todo} isDone: ${createTodoDto.isDone}`;
   // }
 
   // findAll() {
@@ -69,7 +69,7 @@ export class TodosService {
   // }
 
   // update(id: number, updateTodoDto: UpdateTodoDto) {
-  //   return `This action updates a #${id} - todo: ${updateTodoDto.title} is_done: ${updateTodoDto.is_done}`;
+  //   return `This action updates a #${id} - todo: ${updateTodoDto.title} isDone: ${updateTodoDto.isDone}`;
   // }
 
   // remove(id: number) {
